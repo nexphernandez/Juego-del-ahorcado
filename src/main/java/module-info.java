@@ -1,7 +1,7 @@
 module es.nexphernandez.juego.ahorcado{
     requires javafx.controls;
     requires javafx.fxml;
-
+    requires java.sql;
     requires org.controlsfx.controls;
     requires javafx.graphics;
 

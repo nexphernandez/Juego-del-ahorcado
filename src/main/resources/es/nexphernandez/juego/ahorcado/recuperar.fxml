@@ -15,7 +15,7 @@
     </padding>
    <ImageView fx:id="imagen" fitHeight="113.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" translateY="-20.0">
       <image>
-         <Image url="@../../../../email.png" />
+         <Image url="@../../../../../email.png" />
       </image>
    </ImageView>
    <Text fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" translateX="-75.0" />
