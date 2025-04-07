@@ -50,10 +50,22 @@ public class PerfilController {
     @FXML
     private Button regresarButton;
 
+    @FXML
     protected void guardarButtonClick() {
         
     }
+
+    @FXML
     protected void regresarButtonClick() {
-        
+        try {
+            Stage stage = (Stage) regresarButton.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("inicio.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            stage.setTitle("Pantalla de inicio");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

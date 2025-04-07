@@ -15,12 +15,12 @@
    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel:facil" />
    <ImageView fitHeight="59.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../usuario.png" />
+         <Image url="@../../../../usuario.png" />
       </image>
    </ImageView>
    <ImageView fitHeight="144.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
       <image>
-         <Image url="@../../../ahorcado.png" />
+         <Image url="@../../../../ahorcado.png" />
       </image>
    </ImageView>
    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="P Oculta:PALABRA " />
