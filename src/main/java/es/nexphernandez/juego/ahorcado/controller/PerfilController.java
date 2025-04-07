@@ -1,6 +1,7 @@
 package es.nexphernandez.juego.ahorcado.controller;
 
 import es.nexphernandez.juego.ahorcado.PrincipalApplication;
+import es.nexphernandez.juego.ahorcado.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ import javafx.stage.Stage;
  * @author nexphernandez
  * @version 1.0.0
  */
-public class PerfilController {
+public class PerfilController extends AbstractController{
     @FXML
     private Text userText;
 
@@ -55,11 +56,14 @@ public class PerfilController {
         
     }
 
+    /**
+     * Metodo para ir a la pantalla inicio
+     */
     @FXML
     protected void regresarButtonClick() {
         try {
             Stage stage = (Stage) regresarButton.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("inicio.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource(getDireccion()+".fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla de inicio");
             stage.setScene(scene);

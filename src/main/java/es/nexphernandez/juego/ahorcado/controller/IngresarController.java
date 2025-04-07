@@ -1,6 +1,7 @@
 package es.nexphernandez.juego.ahorcado.controller;
 
 import es.nexphernandez.juego.ahorcado.PrincipalApplication;
+import es.nexphernandez.juego.ahorcado.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -49,6 +50,8 @@ public class IngresarController {
         try {
             Stage stage = (Stage) editarButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("perfil.fxml"));
+            PerfilController perfilController = fxmlLoader.getController();
+            perfilController.setDireccion("ingresar");
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla Recuperar Contraseña");
             stage.setScene(scene);
@@ -83,6 +86,8 @@ public class IngresarController {
         try {
             Stage stage = (Stage) regresarButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("inicio.fxml"));
+            
+            
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla Recuperar Contraseña");
             stage.setScene(scene);
