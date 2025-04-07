@@ -1,7 +1,6 @@
 package es.nexphernandez.juego.ahorcado.controller;
 
 import es.nexphernandez.juego.ahorcado.PrincipalApplication;
-import es.nexphernandez.juego.ahorcado.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -61,10 +60,10 @@ public class InicioController {
         try {
             Stage stage = (Stage) registrarButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("perfil.fxml"));
-            PerfilController perfilController = fxmlLoader.getController();
-            perfilController.setDireccion("ingresar");
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
-            stage.setTitle("Pantalla Recuperar Contraseña");
+            PerfilController perfilController = fxmlLoader.getController();
+            perfilController.setDireccion("inicio");
+            stage.setTitle("Pantalla de inicio");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
