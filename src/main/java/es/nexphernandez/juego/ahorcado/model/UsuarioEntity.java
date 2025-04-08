@@ -24,6 +24,9 @@ public class UsuarioEntity {
      * @param password de la clase
      */
     public UsuarioEntity(String user, String email, String password) {
+        if (!email.contains("@") || !email.contains(".") ) {
+            throw new ExceptionInInitializerError("El email debe tener un formato correcto");
+        }
         this.user = user;
         this.email = email;
         this.password = password;
@@ -44,6 +47,9 @@ public class UsuarioEntity {
     }
 
     public void setEmail(String email) {
+        if (!email.contains("@") || !email.contains(".") ) {
+            throw new ExceptionInInitializerError("El email debe tener un formato correcto");
+        }
         this.email = email;
     }
 

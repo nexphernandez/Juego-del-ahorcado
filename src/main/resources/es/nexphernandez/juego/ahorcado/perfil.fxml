@@ -23,4 +23,5 @@
    <PasswordField fx:id="RepetirPasswordField" text="*****" />
    <Button fx:id="guardarButton" mnemonicParsing="false" onAction="#guardarButtonClick" text="Guardar" />
    <Button fx:id="regresarButton" mnemonicParsing="false" onAction="#regresarButtonClick" text="Regresar" />
+    <Text fx:id="errorText" layoutX="131.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" />
 </VBox>

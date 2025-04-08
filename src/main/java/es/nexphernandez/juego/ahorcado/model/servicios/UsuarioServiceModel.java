@@ -35,24 +35,23 @@ public class UsuarioServiceModel extends Conexion {
      */
     public ArrayList<UsuarioEntity> leerSentencia(String sql){
         ArrayList<UsuarioEntity> usuarios = new ArrayList<>();
-        try {
-            PreparedStatement sentencia = conectar().prepareStatement(sql);
-            ResultSet resultado = sentencia.executeQuery();
-    
-            while (resultado.next()) {
-                String userStr = resultado.getString("user");
-                String emailStr = resultado.getString("email");
-                String passwordStr = resultado.getString("password");
-        
-                UsuarioEntity usuario = new UsuarioEntity(userStr, emailStr, passwordStr);
-                usuarios.add(usuario);
-            }
-        } catch (Exception e) { 
-            e.printStackTrace();
-        } finally {
-            cerrar();
+    try (PreparedStatement sentencia = conectar().prepareStatement(sql);
+         ResultSet resultado = sentencia.executeQuery()) {
+
+        while (resultado.next()) {
+            String userStr = resultado.getString("user");
+            String emailStr = resultado.getString("email");
+            String passwordStr = resultado.getString("password");
+
+            UsuarioEntity usuario = new UsuarioEntity(userStr, emailStr, passwordStr);
+            usuarios.add(usuario);
         }
-        return usuarios;
+    } catch (Exception e) { 
+        e.printStackTrace();
+    } finally {
+        cerrar();
+    }
+    return usuarios;
     }
 
     /**
@@ -88,7 +87,7 @@ public class UsuarioServiceModel extends Conexion {
         if (usuario == null) {
             return false;
         }
-        String sql = "INSERT INTO usuarios (user, email, password, puntos, idNivel) Values (?,?,?,?,?)";
+        String sql = "INSERT INTO usuarios (user, email, password, puntos, id_Nivel) Values (?,?,?,?,?)";
         return actualizarDatos(sql, usuario);
     }
 
@@ -142,7 +141,7 @@ public class UsuarioServiceModel extends Conexion {
                 throw new SQLException("No se encontro el usuario =" + nombreUsuario);
             }
             int idNivel = usuario.getIdNivel();
-            String sql = "SELECT palabra FROM palabras WERE id_nivel = ? ORDER BY RANDOM() LIMIT 1";
+            String sql = "SELECT palabra FROM palabras WHERE id_nivel = ? ORDER BY RANDOM() LIMIT 1";
             PreparedStatement sentencia = conectar().prepareStatement(sql);
             sentencia.setInt(1, idNivel);
             ResultSet resultado = sentencia.executeQuery();
@@ -160,7 +159,16 @@ public class UsuarioServiceModel extends Conexion {
         return palabra;
     }
 
-    public void actualizarPuntos(){
-        String 
+    public void actualizarPuntos(String nombreUsuario, int nuevosPuntos){
+        String sql = "UPDATE usuarios SET puntos = ? WHERE user = ?";
+        try (PreparedStatement stmt = conectar().prepareStatement(sql)) {
+            stmt.setInt(1, nuevosPuntos);
+            stmt.setString(2, nombreUsuario);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cerrar();
+        }
     }
 }

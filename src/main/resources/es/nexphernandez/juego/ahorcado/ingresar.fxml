@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="614.0" prefWidth="331.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.nexphernandez.juego.ahorcado.controller.IngresarController">
+<VBox alignment="CENTER" prefHeight="614.0" prefWidth="331.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.nexphernandez.juego.ahorcado.controller.IngresarController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -19,4 +19,5 @@
    <Button fx:id="editarButton" mnemonicParsing="false" onAction="#openEditarClick" text="Editar" />
    <Button fx:id="jugarButton" mnemonicParsing="false" onAction="#openjugarClick" text="Jugar" />
     <Button fx:id="regresarButton" alignment="TOP_CENTER" onAction="#openRegresarClick" prefHeight="26.0" prefWidth="163.0" text="Regresar" textAlignment="CENTER" />
+   <Button fx:id="listarbutton" mnemonicParsing="false" onAction="#openListarClick" text="Listar Usuarios" />
 </VBox>

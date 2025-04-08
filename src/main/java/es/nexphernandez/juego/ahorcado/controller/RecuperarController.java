@@ -1,6 +1,7 @@
 package es.nexphernandez.juego.ahorcado.controller;
 
 import es.nexphernandez.juego.ahorcado.PrincipalApplication;
+import es.nexphernandez.juego.ahorcado.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ import javafx.stage.Stage;
  * @author nexphernandez
  * @version 1.0.0
  */
-public class RecuperarController {
+public class RecuperarController extends AbstractController{
     @FXML
     private Text emailText;
 
@@ -34,7 +35,16 @@ public class RecuperarController {
      */
     @FXML
     protected void onEnviarClick() {
-        texto.setText("Revisa el email.");
+        if (emailField.getText() == null || emailField.getText().isEmpty()) {
+            texto.setText("no puedes dejar el campo vacio");
+            return;
+        }
+        if (getUsuarioServiceModel().obtenerUsuariosPorEmail(emailField.getText()) == null) {
+            texto.setText("no hay usuarios registrados con ese email");
+            return;
+        }
+        texto.setText("Su contraseña es: "
+                + getUsuarioServiceModel().obtenerUsuariosPorEmail(emailField.getText()).getPassword());
     }
 
     /**

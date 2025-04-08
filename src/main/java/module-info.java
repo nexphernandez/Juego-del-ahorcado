@@ -8,5 +8,7 @@ module es.nexphernandez.juego.ahorcado{
     opens es.nexphernandez.juego.ahorcado to javafx.fxml;
     exports es.nexphernandez.juego.ahorcado;
     exports es.nexphernandez.juego.ahorcado.controller;
+    exports es.nexphernandez.juego.ahorcado.controller.abstractas;
+    exports es.nexphernandez.juego.ahorcado.model;
     opens es.nexphernandez.juego.ahorcado.controller to javafx.fxml;
 }

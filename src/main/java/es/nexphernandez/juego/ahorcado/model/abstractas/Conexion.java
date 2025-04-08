@@ -54,12 +54,13 @@ public class Conexion {
     public Connection conectar(){
         try {
             if (connection == null) {
-                connection = DriverManager.getConnection("jdbc:squlite:" + rutaArchivoBD);
+                connection = DriverManager.getConnection("jdbc:sqlite:" + rutaArchivoBD);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return connection;
+        
+        return this.connection;
     }
 
     /**
@@ -71,6 +72,7 @@ public class Conexion {
                 return;
             }
             connection.close();
+            connection = null;
         } catch (Exception e) {
             e.printStackTrace();
         }

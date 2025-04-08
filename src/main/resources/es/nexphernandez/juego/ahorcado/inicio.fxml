@@ -15,6 +15,7 @@
    <TextField fx:id="userEmailField" maxHeight="24.0" maxWidth="143.0" minHeight="24.0" minWidth="143.0" prefHeight="24.0" prefWidth="143.0" promptText="User/Email" translateX="20.0" translateY="-40.0" />
    <Text fx:id="passwordText" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" translateX="-100.0" />
    <PasswordField fx:id="passwordField" maxHeight="24.0" maxWidth="143.0" minHeight="24.0" minWidth="143.0" text="*****" translateX="20.0" translateY="-40.0" />
+    <Text fx:id="errorText" layoutX="164.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    <Button fx:id="aceptarButton" mnemonicParsing="false" onAction="#OpenAceptarClick" prefHeight="34.0" prefWidth="173.0" text="Aceptar" />
    <Button fx:id="registrarButton" mnemonicParsing="false" onAction="#OpenRegistrarClick" prefHeight="34.0" prefWidth="173.0" text="Registrar" />
     <Button fx:id="recuperarContraseniaButton" alignment="TOP_CENTER" onAction="#OpenRecuperarContraseniaClick" prefHeight="34.0" prefWidth="173.0" text="Recuperar Contraseña" textAlignment="CENTER" />

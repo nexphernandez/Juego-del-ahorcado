@@ -1,6 +1,7 @@
 package es.nexphernandez.juego.ahorcado.controller;
 
 import es.nexphernandez.juego.ahorcado.PrincipalApplication;
+import es.nexphernandez.juego.ahorcado.controller.abstractas.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ import javafx.stage.Stage;
  * @author nexphernandez
  * @version 1.0.0
  */
-public class IngresarController {
+public class IngresarController extends AbstractController{
     @FXML
     private Text userText;
 
@@ -40,6 +41,9 @@ public class IngresarController {
 
     @FXML
     private Button regresarButton;
+
+    @FXML
+    private Button listarbutton;
 
     /**
      * Metodo para ir a la pantalla perfil
@@ -85,6 +89,22 @@ public class IngresarController {
         try {
             Stage stage = (Stage) regresarButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("inicio.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 820, 640);
+            stage.setTitle("Pantalla Recuperar Contraseña");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Metodo para ir a la pantalla listar
+     */
+    @FXML
+    protected void openListarClick() {
+        try {
+            Stage stage = (Stage) listarbutton.getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(PrincipalApplication.class.getResource("listarUsuarios.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 820, 640);
             stage.setTitle("Pantalla Recuperar Contraseña");
             stage.setScene(scene);
