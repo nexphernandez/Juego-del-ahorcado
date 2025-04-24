@@ -1,0 +1,105 @@
+/* Estilo general para el fondo */
+.root {
+    -fx-background-color: #01d5ff;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.button:pressed {
+    -fx-background-color: #3e8e41;
+}
+
+/* Textos generales */
+.text {
+    -fx-font-size: 16px;
+    -fx-fill: #333;
+}
+
+.text-bold {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-fill: #222;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50;
+}
+
+/* Etiquetas de error */
+.error-text {
+    -fx-fill: red;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Etiquetas de éxito */
+.success-text {
+    -fx-fill: green;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Partes del cuerpo del ahorcado */
+.circle {
+    -fx-stroke: #333;
+    -fx-fill: transparent;
+    -fx-stroke-width: 2;
+}
+
+.rectangle {
+    -fx-stroke: #333;
+    -fx-fill: transparent;
+    -fx-stroke-width: 2;
+}
+
+/* VBox (contenedores verticales) */
+.vbox {
+    -fx-spacing: 20;
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+/* AnchorPane (contenedores anclados) */
+.anchor-pane {
+    -fx-padding: 20;
+}
+
+/* Botones específicos */
+#regresarButton, #reiniciarButton, #adivinarPalabra {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+#regresarButton:hover, #reiniciarButton:hover, #adivinarPalabra:hover {
+    -fx-background-color: #1976D2;
+}
+
+#regresarButton:pressed, #reiniciarButton:pressed, #adivinarPalabra:pressed {
+    -fx-background-color: #0D47A1;
+}

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.nexphernandez.juego.ahorcado.controller.JugarController">
+<AnchorPane maxHeight="500.0" maxWidth="350.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" stylesheets="@../../../../styles/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.nexphernandez.juego.ahorcado.controller.JugarController">
    <children>
       <Text layoutX="43.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User:">
          <font>
@@ -29,21 +29,21 @@
             <Image url="@../../../usuario.png" />
          </image>
       </ImageView>
-      <Text fx:id="pOcultaText" layoutX="37.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P Oculta:">
+      <Text fx:id="pOcultaText" layoutX="36.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P Oculta:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Text fx:id="palabraText" layoutX="40.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palabra:">
+      <Text fx:id="palabraText" layoutX="38.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palabra:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Button fx:id="adivinarPalabra" layoutX="141.0" layoutY="374.0" mnemonicParsing="false" onAction="#adivinarOnClick" prefHeight="24.0" prefWidth="153.0" text="Adivinar" />
-      <Button fx:id="reiniciarButton" layoutX="82.0" layoutY="415.0" mnemonicParsing="false" onAction="#reiniciarOnClick" prefHeight="24.0" prefWidth="153.0" text="Reiniciar" />
-      <Button fx:id="regresarButton" layoutX="82.0" layoutY="449.0" mnemonicParsing="false" onAction="#juegoToInicioOnClick" prefHeight="24.0" prefWidth="153.0" text="Regresar" />
-      <TextField fx:id="adivinarTextField" layoutX="101.0" layoutY="348.0" prefHeight="26.0" prefWidth="206.0" promptText="escribe una letra o la palabra" />
-      <Text fx:id="palabraOcultaText" layoutX="153.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="adivinarPalabra" layoutX="123.0" layoutY="361.0" mnemonicParsing="false" onAction="#adivinarOnClick" prefHeight="41.0" prefWidth="123.0" text="Adivinar" />
+      <Button fx:id="reiniciarButton" layoutX="123.0" layoutY="408.0" mnemonicParsing="false" onAction="#reiniciarOnClick" prefHeight="41.0" prefWidth="123.0" text="Reiniciar" />
+      <Button fx:id="regresarButton" layoutX="123.0" layoutY="455.0" mnemonicParsing="false" onAction="#juegoToInicioOnClick" prefHeight="41.0" prefWidth="123.0" text="Regresar" />
+      <TextField fx:id="adivinarTextField" layoutX="104.0" layoutY="329.0" prefHeight="26.0" prefWidth="206.0" promptText="escribe una letra o la palabra" />
+      <Text fx:id="palabraOcultaText" layoutX="104.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.4000000000001" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="84.0" layoutY="273.0" stroke="BLACK" strokeType="INSIDE" width="123.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="179.0" layoutX="159.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="22.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="16.0" layoutX="96.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" width="89.0" />
