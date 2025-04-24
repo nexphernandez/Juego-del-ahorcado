@@ -70,12 +70,12 @@ El proyecto utiliza una base de datos SQLite (`ahorcado.db`) que incluye las sig
 
 La base de datos se encuentra en el directorio `src/main/resources` y se inicializa automáticamente al ejecutar el juego.
 
-## Capturas de Pantalla (Opcional)
+## Capturas de Pantalla 
 Puedes incluir capturas de pantalla del juego para mostrar su interfaz gráfica. Por ejemplo:
 - **Pantalla de Inicio**:
-  ![Inicio](src/main/resources/imagenes/inicio.png)
+  ![Inicio](doc/img/incio.png)
 - **Pantalla de Juego**:
-  ![Juego](src/main/resources/imagenes/juego.png)
+  ![Juego](doc/img/juego.png)
 
 ## Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas colaborar en este proyecto:
